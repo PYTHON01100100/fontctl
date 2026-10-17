@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+          cache: true
+      - run: sudo apt-get update && sudo apt-get install -y fontconfig
+      - run: go mod tidy
+      - run: go test ./...
+      - run: go vet ./...
+      - run: go build -o fontctl ./cmd/fontctl
+      - run: ./fontctl doctor
+      - run: ./fontctl preview --lang ar

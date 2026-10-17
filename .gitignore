@@ -1,0 +1,5 @@
+/fontctl
+*.exe
+*.log
+.DS_Store
+.coverage

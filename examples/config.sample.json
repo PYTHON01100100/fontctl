@@ -1,0 +1,10 @@
+{
+  "language_fonts": {
+    "ar": { "sans": "Noto Sans Arabic" },
+    "ja": { "sans": "Noto Sans CJK JP" }
+  },
+  "terminals": {
+    "kitty": { "family": "Cascadia Code NF", "size": 12 }
+  },
+  "gnome": { "interface": "Noto Sans", "monospace": "DejaVu Sans Mono" }
+}
